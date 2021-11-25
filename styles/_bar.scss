@@ -1,0 +1,46 @@
+@import 'media-queries';
+
+
+.bar{
+    height: 24px;
+    background-color: black;
+    position: relative;
+
+    
+
+    &__covidinfo{
+        position: relative;
+        color: white;
+        padding-left: 45%;
+
+        &:hover{
+            color: orange;
+            transition: all 0.2s ease;
+        }
+        @include tablet{
+        margin-left:25px ;
+        padding-left: 0%;
+        }
+    }
+
+    &__authorization{
+        position: relative;
+        float: right;
+        margin-right:25px ;
+    }
+    
+    &__authorization a{
+        text-decoration: none;
+        color: white;
+        justify-content: space-between;
+        margin: 8px;
+
+        &:hover{
+            color: orange;
+            transition: all 0.2s ease;
+        }
+    }
+    &__authorization span{
+        color: white;
+    }
+}

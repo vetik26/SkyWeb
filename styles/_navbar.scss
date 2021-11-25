@@ -1,0 +1,78 @@
+@import 'media-queries';
+
+
+.navbar{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    border-bottom:3px solid #E5E5E5;
+    position: relative;
+
+    &__cart{
+        margin-right: 24px;
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 2rem;
+        cursor: pointer;
+            
+}
+
+    &__bars{
+        position: relative;
+        opacity: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        float: left;
+            @include tablet {
+            cursor: pointer;
+            margin-left: 24px;
+            color: black;
+            opacity: 1;
+            font-size: 2rem;
+    }
+}
+
+    &__logo {
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(to right,#FFF600,#FFCF07,#FFA80F,#FE8116,#FE5A1D);
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip: text;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2.5rem;
+        position: relative;
+        margin-left: 50px;
+        @include tablet{
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+    }
+
+    &__menu {
+        width: 100%;
+        position: relative;
+        margin-left: 50px;
+        font-size: 1.3rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        @include tablet{
+            display: none;
+        }
+        &--links {
+            
+            color: #676768;
+            text-decoration: none;
+            padding: 20px;;
+
+            &:hover{
+                color: orange;
+                transition: all 0.2s ease;
+            }
+        }
+    }
+
+}

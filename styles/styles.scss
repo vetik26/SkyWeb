@@ -1,0 +1,158 @@
+@import 'navbar';
+@import 'bar';
+@import 'media-queries';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Spectral:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Outfit:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Outfit', sans-serif;
+}
+
+
+//Hero Section CSS
+
+.hero{
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    &__container--name{
+        margin-top: 40px;
+        position: relative;
+        font-family: 'Spectral', serif;
+        text-align: left;
+        @include tablet{
+            margin-left: 10%;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__container--price{
+        position: relative;
+        @include tablet{
+            margin-left: 47%;
+            position:absolute;
+            justify-content: center;
+        }
+    }
+
+    &__container--info{
+        font-size: 0.8rem;
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+        letter-spacing: 1px;
+        color: #99999E;
+        @include tablet{
+            margin-left: 7%;
+        }
+    }
+
+    &__container--info a{
+            margin-left: 6.7%;
+            color: #675C76;
+            @include tablet{
+                float: left;
+                margin-left: 52px;
+            }
+    }
+
+    &__container--info i{
+        margin-right: 2%;
+        font-size: 1.3rem;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid grey;
+        padding: 10px;
+        
+    }
+
+    &__container--left{
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        @include tablet{
+            & img{
+                width: 150%;
+                
+            }
+            margin-left: 40%;
+            
+            width: 200px;
+            height: auto;
+        }
+        
+    }
+
+    &__container--right{
+        
+        top: 50%;
+        margin-right: 20px;
+        align-items: center;
+        color: #666666;
+        height: auto;
+        @include tablet{
+            position: absolute;
+        }
+    }
+
+    &__container--price{
+        position: relative;
+        color: #9D9CA1;
+    }
+
+    &__container--btn{
+        background-color: #113050;
+        padding: 14px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s;
+        outline: none;
+        width: 100%;
+        @include tablet {
+            width: 90%;
+            margin-left: 7%;
+            margin-bottom: 6px;
+        }
+
+    }
+
+    &__container--btn a{
+        font-size: 20px;
+        position: relative;
+        z-index: 2 ;
+        color: white;
+        text-decoration: none;
+
+    }
+
+    &__container--btn:after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #FFA500;
+        transition: all 0.3s;
+
+    }
+    &__container--btn:hover:after{
+        width: 100%;    
+    }
+    
+}
